@@ -8,13 +8,14 @@
     <ProjectGuid>{B3172CBB-BCEC-40B6-AA68-3FC2625992C2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OneUpside_Data</RootNamespace>
-    <AssemblyName>OneUpside-Data</AssemblyName>
+    <RootNamespace>OneUpside.Data</RootNamespace>
+    <AssemblyName>OneUpside.Data</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <CodeAnalysisRuleSet>StandardAnalysis.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,10 +36,44 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ArrayExtensions.cs" />
+    <Compile Include="CaseException.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="DictionaryExtensions.cs" />
+    <Compile Include="Either.cs" />
+    <Compile Include="Either`2.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="FuncFuncs.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="ImmutableDictionaryExtensions.cs" />
+    <Compile Include="Indirect.cs" />
+    <Compile Include="Indirect`1.cs" />
+    <Compile Include="Ite.cs" />
+    <Compile Include="IteExtensions.cs" />
+    <Compile Include="Ite`1.cs" />
+    <Compile Include="Maybe.cs" />
+    <Compile Include="Maybe`1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefObject.cs" />
+    <Compile Include="RefObject`1.cs" />
+    <Compile Include="SFunc.cs" />
+    <Compile Include="SFuncData.cs" />
+    <Compile Include="SFunc`2.cs" />
+    <Compile Include="SFunc`3.cs" />
+    <Compile Include="Stringy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
